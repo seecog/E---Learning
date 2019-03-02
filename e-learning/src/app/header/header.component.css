@@ -1,0 +1,22 @@
+
+.navbar{
+	
+	background-color:rgb(77, 75, 75);
+}
+.container, .navbar ,.myNavbar, .collapse ,.navbar-collapse, .navbar-brand {
+	height:112px;
+}
+.navbar-brand {
+		padding:0px;
+}
+.nav li a{
+	color:#fff;
+	font:normal 15px/20px  verdana;
+	
+}
+.nav li a:hover{
+	color:#000;
+}
+#myNavbar{
+	padding-top:20px;
+}

@@ -1,0 +1,53 @@
+
+  <div class="col-lg-12">
+    <h2>Registration Form</h2>
+  </div>
+  <div class="col-lg-12">
+    <form [formGroup]='signInForm'>
+      <div class='form-group'>
+        <label>Name</label>
+        <input class='form-control' formControlName="name" required>
+        <div style="color:red" *ngIf='signInForm.get("name").errors && signInForm.get("name").touched'>
+            <span *ngIf="signInForm.get('name').errors['required']">Name is Required</span>
+            <span *ngIf='signInForm.get("name").errors["minlength"]'>Minimum 4 char required</span>
+            <span *ngIf="signInForm.get('name').errors['maxlength']">Maximum 12 char allowed</span>
+        </div>
+        
+      </div>
+      <div class='form-group'>
+        <label>Mobile Number</label>
+        <input class='form-control' formControlName="mobileNumber" required>
+        <div style="color:red" *ngIf="signInForm.get('mobileNumber').errors && signInForm.get('mobileNumber').touched">
+          <span *ngIf="signInForm.get('mobileNumber').errors['required']">Number is required</span>
+          <span *ngIf="signInForm.get('mobileNumber').errors['minlength']">Minimum 10 digit required</span>
+        </div>
+      </div>
+      <div class='form-group'>
+        <label>Email ID</label>
+        <input class='form-control' email formControlName="email" required>
+        <div style="color:red" *ngIf="signInForm.get('email').errors && signInForm.get('email').touched ">
+          <span *ngIf="signInForm.get('email').errors['required']">Email is required</span>
+          <span *ngIf="signInForm.get('email').errors['email']">Enter valid Email Id</span>
+        </div>
+      </div>
+      <div class='form-group'>
+        <label>Password</label>
+        <input type="password" class='form-control' formControlName="password" required>
+        <div style="color:red" *ngIf="signInForm.get('password').errors && signInForm.get('password').touched">
+          <span *ngIf="signInForm.get('password').errors['required']">Password is required</span>
+          <span *ngIf="signInForm.get('password').errors['minlength']">Minimum 6 char required</span>
+        </div>
+      </div>
+      <div class='form-group'>
+        <label>Re-type Password</label>
+        <input type="password" class='form-control' formControlName="retypePassword" required>
+        <div style="color:red" *ngIf="signInForm.get('retypePassword').errors && signInForm.get('retypePassword').touched">
+            <span *ngIf="signInForm.get('retypePassword').errors['required']">Password is required</span>
+            <span *ngIf="signInForm.get('retypePassword').errors['minlength']">Minimum 6 char required</span>
+          </div>
+      </div>
+      <div>
+      <button class='btn btn-primary' [disabled]='!signInForm.valid' (click)="register()">Sign Up</button>
+      </div>
+    </form>
+  </div>

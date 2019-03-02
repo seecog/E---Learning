@@ -1,0 +1,92 @@
+body{
+	color :blue;
+	margin: 0px;
+	background-color:#cecece;
+	padding: 0px;
+}
+.section{
+	width:100%;
+	background-color:#fff;
+	height:450px;
+	margin-top:113px;
+}
+.courses{
+	border:1px solid #646464;
+	box-shadow: 5px 10px 18px grey;
+	height:330px;
+	
+}
+.row h2{
+	text-align:center;
+	padding:15px 0px;
+	font:bold 35px/30px  verdana;
+}
+.col-lg-3{
+	padding:0px 10px;
+}
+.courses h3{
+	font:normal 20px/23px  verdana;
+	color:#000;
+	text-align:center;
+}
+.courses p{
+	font:normal 16px/20px  "Open Sans", Arial, Tahoma, sans-serif;
+	color:#646464;
+	padding:0px 5px;
+}
+
+#testimonial { 
+ font-family: 'Open Sans', 'sans-serif';
+color: #cecece;
+background: #222;
+overflow: hidden;
+width: 100%;
+position: relative;
+height: 200px;
+}
+
+.item-1, 
+.item-2, 
+.item-3 {
+	position: absolute;
+  display: block;
+	top: 2em;
+  
+  width: 60%;
+  
+  font-size: 2em;
+
+	animation-duration:5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
