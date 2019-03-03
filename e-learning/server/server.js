@@ -19,7 +19,10 @@ app.use(bodyParser.json());
 //router start
 var categoryRouter = require("./controllers/category.controller");
 app.use('/api/admin/',categoryRouter);
-
+var courseRouter = require("./controllers/course.controller");
+app.use('/api/admin/',courseRouter);
+var topicRouter = require("./controllers/topics.controller");
+app.use('/api/admin/',topicRouter);
 //router end
 
 app.listen(config.port,()=>{
